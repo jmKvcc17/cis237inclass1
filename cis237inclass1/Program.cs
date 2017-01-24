@@ -16,6 +16,7 @@ namespace cis237inclass1
             // Create an array of employee objects
             Employee[] employeeArray = new Employee[10];
 
+            /*
             // Let's add some employees to our array
             employeeArray[0] = new Employee("Jesse", "Meachum", 34.34m);
             employeeArray[1] = new Employee("Jimbo", "Bobby", .02m);
@@ -23,6 +24,14 @@ namespace cis237inclass1
             employeeArray[3] = new Employee("uy", "Pefrson", 100.2m);
             employeeArray[4] = new Employee("Gu", "Pedrson", 10.02m);
             employeeArray[5] = new Employee("Gy", "Perfson", 102m);
+            */
+
+            // make the string for the path to the csv file
+            string pathToCSV = "../employees.csv";
+
+            CVSProcessor processor = new CVSProcessor();
+
+            processor.ImportCSV(pathToCSV, employeeArray);
 
             // Get some input from the user
             int choice = ui.GetUserInput();
